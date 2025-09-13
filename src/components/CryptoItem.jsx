@@ -9,10 +9,15 @@ import { useState } from "react"
 import CryptoPlantModal  from './CryptoPlantModal'
 
 export const CryptoItem = ({ data }) => {
-    const [showModal, setShowModal] =useState(false);
+    const [showModal, setShowModal] =useState (false);
 
-    const handlePlantClick = () => {
-        alert("Plant Confirmed!");
+    const handlePlantClick = (id) => {
+        
+        if(localStorage.getItem(id)){
+            
+        }else {
+            localStorage.setItem(data.id, "0")
+        }
         setShowModal(false);
     }
 
@@ -23,54 +28,30 @@ export const CryptoItem = ({ data }) => {
         current_price: 115780, */
 
     return (
-        
         <>
-            
-                
-        <div className="w-1/1 h-15 bg-white border-2 border-gray-200 p-5 relative rounded-xl  flex gap-6">
-            <div className="absolute top-3">
-                <img 
-                    src={data.image}
-                    alt={data.symbol} 
-
-                    className="size-9"
-                />
+            <div className="w-full h-15 bg-white border-2 border-gray-200 p-5 relative rounded-xl flex items-center gap-6">
+                <div>
+                    <img 
+                        src={data.image}
+                        alt={data.symbol} 
+                        className="size-9"
+                    />
+                </div>
+                <div className="flex flex-1 justify-between items-center text-center px-6">
+                    <span>{data.symbol.toUpperCase()}</span>
+                    <span id="price">{'$' + data.current_price}</span>
+                    <span id="1h">{Math.floor(Number(data.price_change_24h)) + '%'}</span>
+                    <span id="24h">{Math.floor(Number(data.price_change_24h)) + '%'}</span>
+                    <span id="7d">{Math.floor(Number(data.price_change_24h)) + '%'}</span>
+                </div>
+                <button
+                    className="bg-green-500 hover:bg-green-600 text-white font-semibold w-25 p-2 rounded-lg shadow-black hover:translate-y-[-3px] transition-all active:translate-y-0"
+                    onClick={() => { saveObject({ ...data }); setShowModal(true); }}
+                >
+                    Plant
+                </button>
+                {showModal && <CryptoPlantModal onCancel={() => setShowModal(false)} onPlant={()=> handlePlantClick(data.id)} id={data.id}/>}
             </div>
-            <div className="grid grid-cols-5 gap-4 absolute left-1/5 text-center">
-                <span >
-                    { data.symbol.toUpperCase() }
-                </span>
-                <span id="price">
-                    { '$' + data.current_price }
-                </span>
-
-                <span id="1h">
-                    { Math.floor(Number(data.price_change_24h)) + '%'}
-                </span>
-
-                <span id="24h">
-                    { Math.floor(Number(data.price_change_24h)) + '%'}
-                </span>
-
-                <span id="7d">
-                    { Math.floor(Number(data.price_change_24h)) + '%'}
-                </span>
-                <span>
-
-                </span>
-            </div>
-
-            <button
-                className=" absolute bg-green-500 hover:bg-green-600 text-white font-semibold  w-25 p-2 right-5 bottom-2 rounded-lg shadow-black hover:translate-y-[-3px] transition-all active:translate-y-0"
-
-                onClick={() => {saveObject({ data }), setShowModal(true)}}
-            >
-                Plant
-            </button>
-        
-            {showModal && <CryptoPlantModal onCancel={() => setShowModal(false)} onPlant={()=> handlePlantClick()} />}
-
-        </div>
         </>
     )
 }

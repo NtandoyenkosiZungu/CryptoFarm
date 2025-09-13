@@ -1,7 +1,6 @@
 import './App.css'
+import { CounterProvider } from './components/CounterContext'
 import { NavBar } from "./components/NavBar"
-import CryptoPlantModal  from './components/CryptoPlantModal'
-import CryptoHarvestModal  from './components/CryptoHarvestModal'
 import HomePage  from './pages/HomePage'
 
 function App() {
@@ -34,10 +33,10 @@ function App() {
       <div className="mt-[-0.5%] w-[100%] flex justify-center fixed">
         <NavBar />
       </div>
-      <HomePage />
-
-      <HomePage/>
-      
+      <CounterProvider>
+        <HomePage />
+      </CounterProvider>
+           
     </>
   )
 }

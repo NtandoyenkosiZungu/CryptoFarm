@@ -1,6 +1,12 @@
+import { useState } from "react";
+import { useCounter } from "./CounterContext";
 
 
-const CryptoPlantModal = ({onCancel, onPlant}) => {
+const CryptoPlantModal = ({onCancel, onPlant, id}) => {
+
+    const [volume, setVolume] = useState(0)
+    
+    const {increment} = useCounter()
 
     const handleCancelClick = () => {
         if (onCancel) {
@@ -11,6 +17,7 @@ const CryptoPlantModal = ({onCancel, onPlant}) => {
     const handlePlantClick = () => {
         if (onPlant) {
             onPlant();
+            increment()
         }
     };
 
@@ -36,7 +43,7 @@ const CryptoPlantModal = ({onCancel, onPlant}) => {
             <div id="plant-qty" className=" h-[300px] flex gap-4 items-end">
                 <span className="flex flex-col">
                     <label htmlFor="qty" className="text-gray-700">{"Quantity:"}</label>
-                    <input type="number" id="qty" className="border border-green-300 p-2 rounded-md" />
+                    <input type="number" id="qty" className="border border-green-300 p-2 rounded-md" value={volume}  onChange={(e) => setVolume(e.target.value)}/>
                 </span>
                 <span>
                     <button 
