@@ -6,7 +6,7 @@ const HomePage = () => {
     return (
         <div className="w-1/1 grid grid-rows-2 gap-5 pl-5 pr-5 mt-[4rem]  lg:grid-cols-2 lg:fixed" >
             <div className="w-full h-[calc(88%-4rem)] grid grid-rows-2 gap-1">
-                <div className="w-1/1 h-9/10 bg-white border-2 border-gray-200 relative rounded-xl m-auto">
+                <div className="w-1/1 h-9/10 bg-white relative rounded-xl m-auto">
                     <TradingViewChart />
                 </div>
                 <CryptoItemContainer />

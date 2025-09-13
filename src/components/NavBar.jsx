@@ -16,11 +16,12 @@ export const NavBar = () => {
                     <div className="h-10 w-20 bg-white-200 flex items-center justify-center rounded-lg border-2 border-green-200 font-semibold">
                         {"$500.00"}
                     </div>
-                    <div className="h-10 w-20 bg-white-200 flex items-center justify-center rounded-lg border-2 border-gray-200 font-semibold">
-                        username
+                    <div className="h-10 w-20 bg-white-200 flex items-center justify-center rounded-lg border-2 border-gray-200">
+                        Sign in
+
                     </div>
                     <div>
-                        <img src={'https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400'} alt="logo" className="h-14 w-15 " />
+                        <img src={'https://cdn.vectorstock.com/i/1000v/29/52/faceless-male-avatar-in-hoodie-vector-56412952.avif'} alt="logo" className="h-14 w-15 rounded-full" />
                     </div>
 
                 </div>

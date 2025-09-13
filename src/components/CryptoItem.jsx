@@ -27,24 +27,23 @@ export const CryptoItem = ({ data }) => {
             </div>
             <div className="flex gap-4 absolute left-1/5">
                 <span>
-                    { data.id || '------' } 
+                    { data.symbol.toUpperCase() }
                 </span>
                 <span id="price">
-                    {data.current_price || '00.00'}
+                    { '$' + data.current_price }
                 </span>
 
                 <span id="1h">
-                    { data.price_change_24h || '00.00'}
+                    { data.price_change_24h + '%'}
                 </span>
 
                 <span id="24h">
-                    { data.price_change_24h || '00.00'}
+                    { data.price_change_24h  + '%'}
                 </span>
 
                 <span id="7d">
-                    { data.price_change_24h || '00.00'}
+                    { data.price_change_24h + '%'}
                 </span>
-
                 <span>
 
                 </span>
