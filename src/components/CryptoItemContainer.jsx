@@ -10,6 +10,8 @@ export const CryptoItemContainer = () => {
                 <CryptoItem data={element} index={index} />
             })
             }
+
+
         </div>
     );
 };
