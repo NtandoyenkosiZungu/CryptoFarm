@@ -1,4 +1,4 @@
-import tree1 from "../assets/Tree 15/TREE 15_YELLOw.png"
+import tree1 from "../assets/Bitcoin/btcTree10.png"
 
 
 const CryptoTree = () => {
