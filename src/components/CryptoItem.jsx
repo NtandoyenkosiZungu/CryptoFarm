@@ -1,7 +1,7 @@
 
 
 
-export const CryptoFarm = () => {
+export const CryptoItem = () => {
     return (
         <div className="w-9/10 h-15 bg-amber-50 border-2 border-black p-5 relative rounded-xl  flex gap-6">
             <div className="absolute top-3">
