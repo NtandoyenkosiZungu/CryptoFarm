@@ -1,12 +1,12 @@
 import './App.css'
-import { CryptoFarm } from './components/CryptoFarm'
+import { CryptoItem } from './components/CryptoFarm'
 
 function App() {
 
   return (
     <>
 
-      <CryptoFarm/>
+      <CryptoItem/>
     </>
   )
 }
