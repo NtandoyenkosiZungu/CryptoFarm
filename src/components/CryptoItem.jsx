@@ -1,33 +1,41 @@
 
-
-
-export const CryptoItem = () => {
-    //
+export const CryptoItem = ({ data }) => {
     return (
+        
+
+        /* id: 'bitcoin', 
+        symbol: 'btc',
+        name: 'Bitcoin', 
+        image: 'https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400', 
+        current_price: 115780, */
+
         <div className="w-1/1 h-15 bg-white border-2 border-gray-200 p-5 relative rounded-xl  flex gap-6">
             <div className="absolute top-3">
                 <img 
-                    src="https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400" 
-                    alt="" 
+                    src={data.image}
+                    alt={data.symbol} 
 
                     className="size-9 "
                 />
             </div>
             <div className="flex gap-4 absolute left-1/5">
+                <span>
+                    { data.id || '------' }
+                </span>
                 <span id="price">
-                    {"$116,121"}
+                    {data.current_price || '00.00'}
                 </span>
 
                 <span id="1h">
-                    {"0.8%"}
+                    { data.price_change_24h || '00.00'}
                 </span>
 
                 <span id="24h">
-                    {"1.3%"}
+                    { data.price_change_24h || '00.00'}
                 </span>
 
                 <span id="7d">
-                    {"5.7%"}
+                    { data.price_change_24h || '00.00'}
                 </span>
 
                 <span>
