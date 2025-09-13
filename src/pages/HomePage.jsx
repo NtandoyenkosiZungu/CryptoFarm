@@ -1,6 +1,6 @@
 import { CryptoItem } from "../components/CryptoItem";
 import { CryptoItemContainer } from "../components/CryptoItemContainer";
-
+import CryptoGarden from "../components/CryptoGarden";
 
 const HomePage = () => {
     return (
@@ -20,9 +20,7 @@ const HomePage = () => {
                 </CryptoItemContainer>
             </div>
 
-            <div className="w-full h-[calc(88%-5rem)] flex justify-center items-center bg-blue-400 rounded-xl mt-4.5">
-
-            </div>
+            <CryptoGarden />
         </div>
     );
 };
