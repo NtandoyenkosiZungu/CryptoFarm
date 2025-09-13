@@ -1,9 +1,10 @@
-
-import tree1 from "../assets/Bitcoin/btcTree10.png";
+import tree1 from '../assets/Bitcoin/btcTree10.png';
 import { useState } from "react";
 import CryptoHarvestModal from "./CryptoHarvestModal";
 
 const CryptoTree = () => {
+    
+    
     const [showModal, setShowModal] = useState(false);
 
     const handleConfirmClick = () => {

@@ -1,3 +1,10 @@
+function saveObject(userData) {
+    localStorage.setItem("user_" + userData.id, JSON.stringify({ id: userData.id, data: userData }));
+    
+    // manually dispatch custom event for same-tab updates
+    window.dispatchEvent(new Event("cryptoSaved"));
+  }
+  
 import { useState } from "react"
 import CryptoPlantModal  from './CryptoPlantModal'
 
@@ -26,7 +33,7 @@ export const CryptoItem = ({ data }) => {
                     src={data.image}
                     alt={data.symbol} 
 
-                    className="size-9 "
+                    className="size-9"
                 />
             </div>
             <div className="grid grid-cols-5 gap-4 absolute left-1/5 text-center">
@@ -56,7 +63,7 @@ export const CryptoItem = ({ data }) => {
             <button
                 className=" absolute bg-green-500 hover:bg-green-600 text-white font-semibold  w-25 p-2 right-5 bottom-2 rounded-lg shadow-black hover:translate-y-[-3px] transition-all active:translate-y-0"
 
-                onClick={() => setShowModal(true)}
+                onClick={() => {saveObject({ data }), setShowModal(true)}}
             >
                 Plant
             </button>
