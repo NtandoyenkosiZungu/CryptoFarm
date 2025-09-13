@@ -13,7 +13,10 @@ export const NavBar = () => {
 
                 {/* Right: Search + Cart */}
                 <div className="flex items-center justify-end space-x-4">
-                    <div className="h-10 w-20 bg-white-200 flex items-center justify-center rounded-lg border-2 border-gray-200">
+                    <div className="h-10 w-20 bg-white-200 flex items-center justify-center rounded-lg border-2 border-green-200 font-semibold">
+                        {"$500.00"}
+                    </div>
+                    <div className="h-10 w-20 bg-white-200 flex items-center justify-center rounded-lg border-2 border-gray-200 font-semibold">
                         username
                     </div>
                     <div>
