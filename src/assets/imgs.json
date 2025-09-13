@@ -1,0 +1,58 @@
+{
+    "btc": [
+        {
+        "g1": "../assets/Bitcoin/btcTree1.png",
+        "g2": "../assets/Bitcoin/btcTree2.png",
+        "g3": "../assets/Bitcoin/btcTree3.png",
+        "g4": "../assets/Bitcoin/btcTree4.png",
+        "g5": "../assets/Bitcoin/btcTree5.png",
+        "g6": "../assets/Bitcoin/btcTree6.png",
+        "g7": "../assets/Bitcoin/btcTree7.png",
+        "g8": "../assets/Bitcoin/btcTree8.png",
+        "g9": "../assets/Bitcoin/btcTree9.png",
+        "g10": "./assets./Bitcoin/btcTree10.png"
+        }
+    ],
+    "eth": [
+        {
+        "g1": "../assets/Ethereum/ethTree1.png",
+        "g2": "../assets/Ethereum/ethTree2.png",
+        "g3": "../assets/Ethereum/ethTree3.png",
+        "g4": "../assets/Ethereum/ethTree4.png",
+        "g5": "../assets/Ethereum/ethTree5.png",
+        "g6": "../assets/Ethereum/ethTree6.png",
+        "g7": "../assets/Ethereum/ethTree7.png",
+        "g8": "../assets/Ethereum/ethTree8.png",
+        "g9": "../assets/Ethereum/ethTree9.png",
+        "g10": "./assets./Ethereum/ethTree10.png"
+        }
+    ],
+    "xrp": [
+        {
+        "g1": "../assets/XRP/xrpTree1.png",
+        "g2": "../assets/XRP/xrpTree2.png",
+        "g3": "../assets/XRP/xrpTree3.png",
+        "g4": "../assets/XRP/xrpTree4.png",
+        "g5": "../assets/XRP/xrpTree5.png",
+        "g6": "../assets/XRP/xrpTree6.png",
+        "g7": "../assets/XRP/xrpTree7.png",
+        "g8": "../assets/XRP/xrpTree8.png",
+        "g9": "../assets/XRP/xrpTree9.png",
+        "g10": "./assets./XRP/xrpTree10.png"
+        }
+    ],
+    "others": [
+        {
+            "g1": "./Others/othTree1.png",
+            "g2": "./Others/othTree2.png",
+            "g3": "./Others/othTree3.png",
+            "g4": "./Others/othTree4.png",
+            "g5": "./Others/othTree5.png",
+            "g6": "./Others/othTree6.png",
+            "g7": "./Others/othTree7.png",
+            "g8": "./Others/othTree8.png",
+            "g9": "./Others/othTree9.png",
+            "g10": "./Others/othTree10.png"
+        }
+    ]
+}
