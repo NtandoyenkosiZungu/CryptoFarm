@@ -4,20 +4,22 @@ export const NavBar = () => {
 
     return (
         <>
-            <div className="bg-neutral-500 w-1/3 h-20 flex rounded-[5px] justify-between">
-                {/* the logo of the page */}
-                <img src={''} alt="logo" className="h-6 w-6" />
-                <div className="text-black text-lg font-mono font-normal text-center">
-                    CryptoFarm
+            <div className="bg-white w-[98%] h-16 grid grid-cols-2 items-center px-4 rounded-lg border-2 border-gray-200">
+                {/* Left: Logo + Name */}
+                <div className="flex items-center space-x-2 ">
+                    <img src={'https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400'} alt="logo" className="h-14 w-15 " />
+                    <div className="text-black text-lg font-mono">CryptoFarm</div>
                 </div>
 
-                {/* search bar  */}
-                <div className="bg-neutral-500 w-1/4 h-20">
-                    search index
-                </div>
-                {/* cart div */}
-                <div className="h-6 w-6">
-                    Crt
+                {/* Right: Search + Cart */}
+                <div className="flex items-center justify-end space-x-4">
+                    <div className="h-10 w-20 bg-white-200 flex items-center justify-center rounded-lg border-2 border-gray-200">
+                        username
+                    </div>
+                    <div>
+                        <img src={'https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400'} alt="logo" className="h-14 w-15 " />
+                    </div>
+
                 </div>
             </div>
         </>
