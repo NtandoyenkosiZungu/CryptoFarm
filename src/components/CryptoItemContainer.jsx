@@ -4,7 +4,7 @@ import { CryptoItem } from "../components/CryptoItem";
 
 export const CryptoItemContainer = () => {
   const [data, setData] = useState([]);
-
+  
   useEffect(() => {
     const loadData = async () => {
       const result = await fetchCryptoData();

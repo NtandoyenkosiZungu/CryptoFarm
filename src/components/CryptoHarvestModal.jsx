@@ -3,7 +3,6 @@ import { useState } from "react";
 
 
 const CryptoHarvestModal = ({onCancel, onConfirm}) => {
-    const [isOpen, setIsOpen] = useState(true);
     
     const handleCancelClick = () => {
         if (onCancel) {
@@ -28,10 +27,16 @@ const CryptoHarvestModal = ({onCancel, onConfirm}) => {
                 </div>
 
                 <div className="flex justify-end">
-                    <button className="bg-red-500 text-white px-4 py-2 rounded-lg mr-2 cursor-pointer hover:bg-red-900 hover:translate-y-[-3px] active:translate-0 active:scale-95 transition-all" onClick={() => handleCancelClick()}>
+                    <button 
+                        className="bg-red-500 text-white px-4 py-2 rounded-lg mr-2 cursor-pointer hover:bg-red-900 hover:translate-y-[-3px] active:translate-0 active:scale-95 transition-all" 
+                        onClick={() => handleCancelClick()}
+                    >
                         Cancel 
                     </button>
-                    <button className="bg-green-500 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-green-700 hover:translate-y-[-3px] active:translate-0 active:scale-95 transition-all" onClick={() => handleConfirmClick()}>
+                    <button 
+                        className="bg-green-500 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-green-700 hover:translate-y-[-3px] active:translate-0 active:scale-95 transition-all" 
+                        onClick={() => handleConfirmClick()}
+                    >
                         Confirm
                     </button>
                 </div>

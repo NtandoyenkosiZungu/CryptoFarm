@@ -1,6 +1,19 @@
 
 
-const CryptoPlantModal = () => {
+const CryptoPlantModal = ({onCancel, onPlant}) => {
+
+    const handleCancelClick = () => {
+        if (onCancel) {
+            onCancel();
+        }
+    };
+
+    const handlePlantClick = () => {
+        if (onPlant) {
+            onPlant();
+        }
+    };
+
     return (
         <div className="w-[50%] h-[500px] bg-white border-2 border-green-300 p-5 rounded-xl grid-rows-2 gap-6 fixed top-[15%] left-[25%] z-50 overflow-hidden">
             <div id="decscription"
@@ -10,7 +23,9 @@ const CryptoPlantModal = () => {
                     <h1 className="text-2xl font-bold mb-4">
                         Bitcoin (BTC)
                     </h1>
-                    <button className="bg-red-500 text-white rounded-md px-4 py-2 hover:bg-red-600 cursor-pointer active:scale-95 transition-all">
+                    <button 
+                        className="bg-red-500 text-white rounded-md px-4 py-2 hover:bg-red-600 cursor-pointer active:scale-95 transition-all"
+                        onClick={() => handleCancelClick()}>
                         Close
                     </button>
                 </div>
@@ -24,7 +39,12 @@ const CryptoPlantModal = () => {
                     <input type="number" id="qty" className="border border-green-300 p-2 rounded-md" />
                 </span>
                 <span>
-                    <button className=" w-[200px] h-[40px] bg-green-500 text-white rounded-md hover:bg-green-600 hover:translate-y-[-4px] active:translate-y-0 active:scale-95 cursor-pointer  transition-all">Plant</button>
+                    <button 
+                        className=" w-[200px] h-[40px] bg-green-500 text-white rounded-md hover:bg-green-600 hover:translate-y-[-4px] active:translate-y-0 active:scale-95 cursor-pointer  transition-all" 
+                        onClick={() => handlePlantClick()}
+                    >
+                        Plant
+                    </button>
                 </span>
             </div>
         </div>

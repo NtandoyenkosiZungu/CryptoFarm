@@ -4,6 +4,11 @@ import CryptoPlantModal  from './CryptoPlantModal'
 export const CryptoItem = ({ data }) => {
     const [showModal, setShowModal] =useState(false);
 
+    const handlePlantClick = () => {
+        alert("Plant Confirmed!");
+        setShowModal(false);
+    }
+
        /* id: 'bitcoin', 
         symbol: 'btc',
         name: 'Bitcoin', 
@@ -13,9 +18,8 @@ export const CryptoItem = ({ data }) => {
     return (
         
         <>
-            {showModal && <CryptoPlantModal />}
-     
-
+            
+                
         <div className="w-1/1 h-15 bg-white border-2 border-gray-200 p-5 relative rounded-xl  flex gap-6">
             <div className="absolute top-3">
                 <img 
@@ -25,8 +29,8 @@ export const CryptoItem = ({ data }) => {
                     className="size-9 "
                 />
             </div>
-            <div className="flex gap-4 absolute left-1/5">
-                <span>
+            <div className="grid grid-cols-5 gap-4 absolute left-1/5 text-center">
+                <span >
                     { data.symbol.toUpperCase() }
                 </span>
                 <span id="price">
@@ -34,15 +38,15 @@ export const CryptoItem = ({ data }) => {
                 </span>
 
                 <span id="1h">
-                    { data.price_change_24h + '%'}
+                    { Math.floor(Number(data.price_change_24h)) + '%'}
                 </span>
 
                 <span id="24h">
-                    { data.price_change_24h  + '%'}
+                    { Math.floor(Number(data.price_change_24h)) + '%'}
                 </span>
 
                 <span id="7d">
-                    { data.price_change_24h + '%'}
+                    { Math.floor(Number(data.price_change_24h)) + '%'}
                 </span>
                 <span>
 
@@ -56,6 +60,9 @@ export const CryptoItem = ({ data }) => {
             >
                 Plant
             </button>
+        
+            {showModal && <CryptoPlantModal onCancel={() => setShowModal(false)} onPlant={()=> handlePlantClick()} />}
+
         </div>
         </>
     )
