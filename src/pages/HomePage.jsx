@@ -19,7 +19,9 @@ const HomePage = () => {
                     <CryptoItem/>
                 </CryptoItemContainer>
             </div>
+            <div className="w-full h-[calc(88%-5rem)] flex justify-center items-center border-gray-200 rounded-xl mt-4.5">
 
+            </div>
             <CryptoGarden />
         </div>
     );
