@@ -20,7 +20,7 @@ const HomePage = () => {
                 </CryptoItemContainer>
             </div>
 
-            <div className="w-full h-[calc(88%-5rem)] flex justify-center items-center bg-blue-400 rounded-xl mt-4.5">
+            <div className="w-full h-[calc(88%-5rem)] flex justify-center items-center border-gray-200 rounded-xl mt-4.5">
 
             </div>
         </div>
