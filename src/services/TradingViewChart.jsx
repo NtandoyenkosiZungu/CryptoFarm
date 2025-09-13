@@ -1,7 +1,7 @@
 import { useEffect, useRef, useCallback } from "react";
 
 export default function TradingViewChart({ 
-  symbol = "BTCUSDT", 
+  symbol = `${'BTC'}USDT`, 
   interval = "60", 
   theme = "white",
   height = 200
