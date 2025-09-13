@@ -1,11 +1,12 @@
 import { useEffect, useRef, useCallback } from "react";
 
 export default function TradingViewChart({ 
-  symbol = `${'BTC'}USDT`, 
+  symbol = 'BTC', 
   interval = "60", 
   theme = "white",
   height = 200
 }) {
+  console.log("Called: " + symbol)
   const containerRef = useRef(null);
   const widgetRef = useRef(null);
 
@@ -32,7 +33,7 @@ export default function TradingViewChart({
     try {
       widgetRef.current = new window.TradingView.widget({
         autosize: true,
-        symbol: `BINANCE:${symbol}`,
+        symbol: `BINANCE:${symbol}USDT`,
         interval: interval,
         timezone: "Etc/UTC",
         theme: theme,

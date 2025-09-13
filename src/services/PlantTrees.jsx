@@ -1,6 +1,4 @@
+export const PlantTrees = () => {
 
-
-
-const PlantTrees = ({cryptoId, }) => {
-    return 
+    return []
 }
