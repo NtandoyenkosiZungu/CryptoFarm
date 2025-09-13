@@ -1,5 +1,5 @@
 import './App.css'
-import { CryptoItem } from './components/CryptoFarm'
+import { CryptoItem } from './components/CryptoItem'
 
 function App() {
 
