@@ -48,7 +48,7 @@ const CryptoTree = ({cryptourrency, initial}) => {
 
 
     const onSelectClick = async() => {
-        const response = await fetch(`http://localhost:3000/crypto?coin=${'bitcoin'}`);
+        const response = await fetch(`http://localhost:3000/crypto?coin=${cryptourrency}`);
 
         if(!response.ok) throw new Error(`Failed to fetch data: ${response.status}`);
         
@@ -86,7 +86,7 @@ const CryptoTree = ({cryptourrency, initial}) => {
                 onClick={() => onSelectClick()}
             />
 
-            {showModal && <CryptoHarvestModal onConfirm={() => handleConfirmClick()} onCancel={() => setShowModal(false)} />}
+            {showModal && <CryptoHarvestModal onConfirm={() => handleConfirmClick()} onCancel={() => setShowModal(false)} profit={12.00} />}
 
         </div>
     );

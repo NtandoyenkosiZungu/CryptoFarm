@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { useCounter } from "./CounterContext";
+import { useCrypto } from "./CryptoContext";
 
 
-const CryptoPlantModal = ({onCancel, onPlant, id}) => {
+const CryptoPlantModal = ({onCancel, onPlant, id, inititialPrice}) => {
+
+    const {addCrypto} = useCrypto();
 
     const [volume, setVolume] = useState(0)
     
@@ -18,6 +21,8 @@ const CryptoPlantModal = ({onCancel, onPlant, id}) => {
         if (onPlant) {
             onPlant();
             increment()
+            let initialPrice = Number(inititialPrice);
+            addCrypto(id, id, volume * initialPrice);
         }
     };
 
