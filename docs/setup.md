@@ -9,10 +9,10 @@
 
 ## Installation
 - <pre>```bash 
-# git clone https://github.com/NtandoyenkosiZungu/CryptoFarm
-# cd cryptofarm
-# npm install
-# npm install tailwindcss @tailwindcss/vite
+- git clone https://github.com/NtandoyenkosiZungu/CryptoFarm
+- cd cryptofarm
+- npm install
+- npm install tailwindcss @tailwindcss/vite
 </pre>
 
 ## Before running the Project
