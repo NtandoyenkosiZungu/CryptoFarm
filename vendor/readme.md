@@ -3,11 +3,11 @@
 - API: coinGecko
        tradingView chart API
 - Tree images: flavicon
-               itch.io       
---
+               itch.io
+
 # Details on the uses of APIs
 
-3# coinGecko Api
+## coinGecko Api
 
 - It is integrated in to the project using a local node.js local server
 - It serves functions of providing the list of crypto currencies for our project
