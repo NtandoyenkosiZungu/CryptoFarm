@@ -8,11 +8,11 @@
 -- react.js
 
 ## Installation
-- <pre>``` 
+- ```
 - git clone https://github.com/NtandoyenkosiZungu/CryptoFarm
 - cd cryptofarm
 - npm install
-- npm install tailwindcss @tailwindcss/vite</pre>
+- npm install tailwindcss @tailwindcss/vite```
 
 ## Before running the Project
 
