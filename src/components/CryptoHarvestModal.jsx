@@ -1,10 +1,11 @@
 
 import { useState } from "react";
 import { useCounter } from "./CounterContext";
+import { useBalance } from "./BalanceContext";
 
 
 const CryptoHarvestModal = ({onCancel, onConfirm, profit}) => {
-
+    const {addBalance} = useBalance();
     const [harvest, setHarvest] = useState();
     const {decrement} = useCounter();
 
@@ -18,6 +19,7 @@ const CryptoHarvestModal = ({onCancel, onConfirm, profit}) => {
         if (onConfirm) {
             decrement();
             onConfirm();
+            addBalance(profit)
         }
     };
 
