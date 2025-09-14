@@ -1,9 +1,9 @@
 # Libraries used
 - react.js, tailsind css, html
-- API: coinGecko
-       tradingView chart API
-- Tree images: flavicon
-               itch.io
+- API: -coinGecko
+       -tradingView chart API
+- Tree images: -flavicon
+               -itch.io
 
 # Details on the uses of APIs
 
@@ -19,10 +19,10 @@
 
 # Out-source tree image from our project
 
-- found on 
-        text```src/assets/```
-  where sourced from text```itch.io```
+- found on
+        text``` src/assets/```
+  where sourced from text``` itch.io```
 
-- webiste logo was sourced from text```flavicon```
+- webiste logo was sourced from text``` flavicon```
 
 
