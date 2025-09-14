@@ -14,6 +14,7 @@ function App() {;
       <div className="mt-[-0.5%] w-[100%] flex justify-center fixed">
         <NavBar />
       </div>
+
       <CounterProvider>
         <CryptoProvider>
         <HomePage />
