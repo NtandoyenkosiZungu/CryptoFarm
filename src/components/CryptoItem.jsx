@@ -12,6 +12,8 @@ export const CryptoItem = ({ data }) => {
     const [showModal, setShowModal] =useState (false);
 
     const handlePlantClick = (id) => {
+
+
         
         if(!localStorage.getItem(id))
             localStorage.setItem(data.id, "0")
@@ -48,7 +50,7 @@ export const CryptoItem = ({ data }) => {
                 >
                     Plant
                 </button>
-                {showModal && <CryptoPlantModal onCancel={() => setShowModal(false)} onPlant={()=> handlePlantClick(data.id)} id={data.id}/>}
+                {showModal && <CryptoPlantModal onCancel={() => setShowModal(false)} onPlant={()=> handlePlantClick(data.id)} id={data.id} inititialPrice={data.current_price}/>}
             </div>
         </>
     )

@@ -1,9 +1,13 @@
 
 import { useState } from "react";
+import { useCounter } from "./CounterContext";
 
 
-const CryptoHarvestModal = ({onCancel, onConfirm}) => {
-    
+const CryptoHarvestModal = ({onCancel, onConfirm, profit}) => {
+
+    const [harvest, setHarvest] = useState();
+    const {decrement} = useCounter();
+
     const handleCancelClick = () => {
         if (onCancel) {
             onCancel();
@@ -12,6 +16,7 @@ const CryptoHarvestModal = ({onCancel, onConfirm}) => {
 
     const handleConfirmClick = () => {
         if (onConfirm) {
+            decrement();
             onConfirm();
         }
     };
@@ -22,7 +27,7 @@ const CryptoHarvestModal = ({onCancel, onConfirm}) => {
                 <h2 className="text-lg font-semibold mb-4">Harvest Crypto</h2>
                 <div className="mb-4 flex flex-col gap-4">
                     <div className="w-[400px] h-15 border-2 border-gray-300 p-3 rounded-lg font-semibold">
-                        <span className="text-gray-700">Amount (USD):</span> <span className="text-green-500">0.00 USD</span>
+                        <span className="text-gray-700">Amount (USD):</span> <span className="text-green-500">{harvest} USD</span>
                     </div>
                 </div>
 
@@ -41,7 +46,6 @@ const CryptoHarvestModal = ({onCancel, onConfirm}) => {
                     </button>
                 </div>
             </div>
-
             
         </div>
     );
