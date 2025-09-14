@@ -1,8 +1,8 @@
 # Libraries used
 - react.js, tailsind css, html
-- API: - coinGecko <br>
+- API: - coinGecko 
        - tradingView chart API
-- Tree images: - flavicon <br>
+- Tree images: - flavicon
                - itch.io
 
 # Details on the uses of APIs
