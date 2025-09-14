@@ -1,3 +1,5 @@
+## Demo video: [https://youtu.be/FfQ3BG6JRyk](https://youtu.be/FfQ3BG6JRyk)
+
 ## CryptoFarm
 
 - The Crypto Farming Simulator is a gamified fintech web application that combines real-time cryptocurrency data with engaging farming mechanics. The platform allows users to “plant” crypto assets in a virtual farm, where each coin grows over time based on live or simulated market performance. Users can harvest, reinvest, and manage their portfolio in a fun and interactive way, while learning about crypto volatility and investment strategies.
