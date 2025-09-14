@@ -1,8 +1,11 @@
 
 import { useState } from "react";
+import { useCounter } from "./CounterContext";
 
 
 const CryptoHarvestModal = ({onCancel, onConfirm}) => {
+
+    const {decrement} = useCounter();
     
     const handleCancelClick = () => {
         if (onCancel) {
@@ -12,6 +15,7 @@ const CryptoHarvestModal = ({onCancel, onConfirm}) => {
 
     const handleConfirmClick = () => {
         if (onConfirm) {
+            decrement();
             onConfirm();
         }
     };
@@ -41,7 +45,6 @@ const CryptoHarvestModal = ({onCancel, onConfirm}) => {
                     </button>
                 </div>
             </div>
-
             
         </div>
     );
