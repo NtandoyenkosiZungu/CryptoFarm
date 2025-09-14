@@ -8,28 +8,27 @@
 -- react.js
 
 ## Installation
-- <pre>```bash 
+- <pre>``` 
 - git clone https://github.com/NtandoyenkosiZungu/CryptoFarm
 - cd cryptofarm
 - npm install
-- npm install tailwindcss @tailwindcss/vite
-</pre>
+- npm install tailwindcss @tailwindcss/vite```</pre>
 
 ## Before running the Project
 
 - head to ``` main.jsx``` , and insect @import "tailwindcss";
 - head to vite.config.js and the code there  will be looking like 
 <pre>```bash
-import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite' <- insect this line
-
-export default defineConfig({
-  plugins: [
-    tailwindcss(), <- and this line
-  ],
-})
+    import { defineConfig } from 'vite'
+    import tailwindcss from '@tailwindcss/vite' <- insect this line
+    
+    export default defineConfig({
+      plugins: [
+        tailwindcss(), <- and this line
+      ],
+    })
 </pre>
 
 ## Now running the Project
 
-```bash #npm run dev```
+```bash npm run dev```
