@@ -21,8 +21,8 @@
 13. when he/she confirms the harvest, the balance updates accordingly
 
 # Demo
-- (Demo Video)[]
-- (demo presentation)[]
+- [Demo Video]()
+- [demo presentation](https://github.com/NtandoyenkosiZungu/CryptoFarm/blob/main/public/CryptoFarm.pptx)
 
 # Notes
 
