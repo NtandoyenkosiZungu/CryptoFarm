@@ -13,6 +13,14 @@
 - ```npm install```
 - ```npm install tailwindcss @tailwindcss/vite```
 
+##To setup the Server for access the Crypto Server API
+-```git clone https://github.com/NtandoyenkosiZungu/CryptoServer```
+-```npm install nodemon```
+-```npm install node-fetch```
+-```npm install express```
+-```npm install cors```
+-```nodemon server.js```
+
 ## Before running the Project
 
 - head to ``` main.jsx``` , and insect @import "tailwindcss";
