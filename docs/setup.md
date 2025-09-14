@@ -3,16 +3,15 @@
 - follow the steps below to set up and run the project
 
 ## Requirements
--- Node.js v20+
--- Tailwindcss
--- react.js
+- Node.js v20+
+- Tailwindcss
+- react.js
 
 ## Installation
-- ```
-- git clone https://github.com/NtandoyenkosiZungu/CryptoFarm
-- cd cryptofarm
-- npm install
-- npm install tailwindcss @tailwindcss/vite```
+- ```git clone https://github.com/NtandoyenkosiZungu/CryptoFarm ```
+- ```cd cryptofarm```
+- ```npm install```
+- ```npm install tailwindcss @tailwindcss/vite```
 
 ## Before running the Project
 
