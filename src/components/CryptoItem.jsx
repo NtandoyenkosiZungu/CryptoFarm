@@ -13,11 +13,9 @@ export const CryptoItem = ({ data }) => {
 
     const handlePlantClick = (id) => {
         
-        if(localStorage.getItem(id)){
-            
-        }else {
+        if(!localStorage.getItem(id))
             localStorage.setItem(data.id, "0")
-        }
+        
         setShowModal(false);
     }
 
