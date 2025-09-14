@@ -8,4 +8,4 @@
 ## 🏫 University Of KwaZulu-Natal
 
 # githuh repo
-- ```https://github.com/NtandoyenkosiZungu/CryptoFarm ```
+- [https://github.com/NtandoyenkosiZungu/CryptoFarm](https://github.com/NtandoyenkosiZungu/CryptoFarm)
