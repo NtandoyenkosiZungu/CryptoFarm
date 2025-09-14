@@ -30,4 +30,4 @@
 
 ## Now running the Project
 
-```bash npm run dev```
+```npm run dev```
