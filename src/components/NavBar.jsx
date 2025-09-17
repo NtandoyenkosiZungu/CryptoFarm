@@ -1,16 +1,7 @@
 import logo from '../assets/logo.png';
-import { useState } from 'react';
-import { BalancePopupModal } from './BalancePopupModal';
-
+import { useBalance } from './BalanceContext';
 export const NavBar = () => {
-    const [showModal, setShowModal] = useState(false);
-    const [balance, setBalance] = useState(localStorage.getItem("balanceID") || 100);
-
-    const handlePlantClick = () => {
-        const newBalance = localStorage.getItem("balanceID");
-        setBalance(newBalance);
-        setShowModal(false); // close after confirm
-    };
+    const {balance} = useBalance()
 
     return (
         <>
@@ -23,16 +14,9 @@ export const NavBar = () => {
 
                 {/* Right: Balance + Sign in + Avatar */}
                 <div className="flex items-center justify-end space-x-4">
-                    <div>
-                        <div>
-                            <button 
-                                type="button"
-                                className="h-10 w-20 flex items-center justify-center rounded-lg border-2 border-green-200 font-semibold"
-                                onClick={() => setShowModal(true)}   // ✅ open popup
-                            >
-                                {'$' + balance}
-                            </button>
-                        </div>
+                    <div className="h-10 w-20 bg-white-200 flex items-center justify-center rounded-lg border-2 border-green-200 font-semibold">
+                        {balance}$
+
                     </div>
                     <div className="h-10 w-20 flex items-center justify-center rounded-lg border-2 border-gray-200">
                         Sign in
@@ -45,15 +29,8 @@ export const NavBar = () => {
                         />
                     </div>
                 </div>
-                {showModal && (
-                    <BalancePopupModal 
-                        onCancel={() => setShowModal(false)} 
-                        onConfirm={handlePlantClick} 
-                        />
-                    )}
             </div>
 
-            {/* ✅ Modal actually mounts when showModal = true */}
             
         </>
     );

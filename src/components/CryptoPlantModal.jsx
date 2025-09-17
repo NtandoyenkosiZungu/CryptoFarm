@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { useCounter } from "./CounterContext";
 import { useCrypto } from "./CryptoContext";
+import { useBalance } from "./BalanceContext";
 
 
-const CryptoPlantModal = ({onCancel, onPlant, id, inititialPrice}) => {
+const CryptoPlantModal = ({onCancel, onPlant, id, initialPrice}) => {
+
+    const {balance, subtractBalance} = useBalance();
 
     const {addCrypto} = useCrypto();
 
@@ -17,12 +20,17 @@ const CryptoPlantModal = ({onCancel, onPlant, id, inititialPrice}) => {
         }
     };
 
-    const handlePlantClick = () => {
+    const handlePlantClick = (initialPrice) => {
         if (onPlant) {
+
+            if(balance - (initialPrice * volume)  < 0) {
+                alert("You have insufficient funds for this purchase")
+                return
+            }
             onPlant();
             increment()
-            let initialPrice = Number(inititialPrice);
-            addCrypto(id, id, volume * initialPrice);
+            subtractBalance(volume * Number(initialPrice));
+            addCrypto(id, id, volume * Number(initialPrice));
         }
     };
 
@@ -47,13 +55,13 @@ const CryptoPlantModal = ({onCancel, onPlant, id, inititialPrice}) => {
             </div>
             <div id="plant-qty" className=" h-[300px] flex gap-4 items-end">
                 <span className="flex flex-col">
-                    <label htmlFor="qty" className="text-gray-700">{"Quantity:"}</label>
+                    <label htmlFor="qty" className="text-gray-700">{`Volume (Price:${initialPrice} ):`}</label>
                     <input type="number" id="qty" className="border border-green-300 p-2 rounded-md" value={volume}  onChange={(e) => setVolume(e.target.value)}/>
                 </span>
                 <span>
                     <button 
                         className=" w-[200px] h-[40px] bg-green-500 text-white rounded-md hover:bg-green-600 hover:translate-y-[-4px] active:translate-y-0 active:scale-95 cursor-pointer  transition-all" 
-                        onClick={() => handlePlantClick()}
+                        onClick={() => handlePlantClick(initialPrice)}
                     >
                         Plant
                     </button>

@@ -2,14 +2,28 @@ import { CryptoItemContainer } from "../components/CryptoItemContainer";
 import  CryptoGarden  from "../components/CryptoGarden";
 import TradingViewChart  from "../services/TradingViewChart"
 import { useState, useEffect } from "react";
+import { useBalance } from "../components/BalanceContext";
+
+
 function loadObjectById(id) {
     const item = localStorage.getItem("user_" + id);
     return item ? JSON.parse(item) : null;
   }
   
 const HomePage = () => {
-    
+    const {setBalance} = useBalance();
+
     const [cryptoId, setCryptoID] = useState('BTC');
+
+    useEffect(()=> {
+      if(localStorage.getItem('balance')){
+        setBalance(Number(localStorage.getItem('balance')))
+      }else {
+        localStorage.setItem('balance', 500)
+        setBalance(500);
+      }
+    }, [])
+
     useEffect(() => {
         const handleCryptoSaved = () => {
           const storedItem = loadObjectById(cryptoId);

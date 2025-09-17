@@ -50,7 +50,7 @@ export const CryptoItem = ({ data }) => {
                 >
                     Plant
                 </button>
-                {showModal && <CryptoPlantModal onCancel={() => setShowModal(false)} onPlant={()=> handlePlantClick(data.id)} id={data.id} inititialPrice={data.current_price}/>}
+                {showModal && <CryptoPlantModal onCancel={() => setShowModal(false)} onPlant={()=> handlePlantClick(data.id)} id={data.id} initialPrice={data.current_price}/>}
             </div>
         </>
     )
