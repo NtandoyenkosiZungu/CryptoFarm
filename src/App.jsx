@@ -16,7 +16,7 @@ function App() {
 
       <CounterProvider>
         <CryptoProvider>
-        <HomePage />
+          <HomePage />
         </CryptoProvider>
       </CounterProvider>
            
